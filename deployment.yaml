@@ -6,7 +6,7 @@ metadata:
   labels:
     app: simple-echo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: simple-echo
@@ -17,7 +17,6 @@ spec:
     spec:
       containers:
       - name: simple-echo
-        image: owosso1212/hostname:latest
+        image: <Your image registry here>
         ports:
         - containerPort: 80
-
