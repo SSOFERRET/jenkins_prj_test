@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: dpy-hname
+  name: dpy-simple-echo
   labels:
-    app: hostname
+    app: simple-echo
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hostname
+      app: simple-echo
   template:
     metadata:
       labels:
-        app: hostname
+        app: simple-echo
     spec:
       containers:
-      - name: hname
+      - name: simple-echo
         image: owosso1212/hostname:latest
         ports:
         - containerPort: 80
